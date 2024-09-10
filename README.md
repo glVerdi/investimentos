@@ -1,4 +1,4 @@
-## **Investimentos Iniciais: Seu Guia Rápido para o Mundo dos Investimentos!** 
+## **Investimentos Iniciais: Seu Guia Rápido para o Mundo dos Investimentos! - Imersão Dev com Google Gemini** 
 
 ### **O que faz essa aplicação?**
 
