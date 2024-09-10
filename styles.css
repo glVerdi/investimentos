@@ -4,7 +4,7 @@
 /* Estiliza o corpo da página */
 body {
     font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-    background-color: rgb(41, 172, 1);; /* Cor de fundo da página */
+    /*background-color: rgb(41, 172, 1); Cor de fundo da página */
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
     align-items: center; /* Centraliza os itens horizontalmente */
@@ -12,6 +12,10 @@ body {
     height: 100vh; /* Preenche a altura total da viewport */
     margin: 0;
     padding: 0;
+    background-image: url('Tipos-de-investimentos-financeiros-qual-o-melhor-para-iniciantes.png'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Faz a imagem cobrir a tela inteira */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
 }
 
 
@@ -98,8 +102,8 @@ section button {
 
 /* Estiliza o rodapé da página */
 footer {
-    background-color: #F5F7F8; /* Cor de fundo do rodapé */
-    color: #45474B; /* Cor do texto */
+    background-color: #f5f7f800; /* Cor de fundo do rodapé */
+    color: rgb(255, 255, 255); /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     padding: 0; /* Espaçamento interno */
     width: 100%; /* Largura total da página */

@@ -5,9 +5,9 @@ function pesquisar() {
   let campoPesquisa = document.getElementById("campo-pesquisa").value;
 
   // se campoPesquisa for uma String sem nada
-  if (campoPesquisa == "") {
-    section.innerHTML = "<p>Nenhum investimento encontrado</P>"
-    return 
+  if (!campoPesquisa) {
+    section.innerHTML = "<p>Nenhum investimento encontrado. Voc^precisa digitar o nome de um investimento</P>";
+    return;
   }
 
   campoPesquisa = campoPesquisa.toLowerCase();
@@ -16,13 +16,15 @@ function pesquisar() {
   let resultados = "";
   let titulo = "";
   let descricao = "";
+  let tags ="";
 
   // Itera sobre cada dado na lista de dados
   for (let dado of dados) {
-    titulo = dado.titulo.toLowerCase()
-    descricao = dado.descricao.toLowerCase()
+    titulo = dado.titulo.toLowerCase();
+    descricao = dado.descricao.toLowerCase();
+    tags = dado.tags.toLowerCase();
     // se titulo includes campoPesquisa
-    if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa)) {
+    if (titulo.includes(campoPesquisa) || descricao.includes(campoPesquisa) || tags.includes(campoPesquisa)) {
       // então, Cria um novo elemento
       resultados += `
         <div class="item-resultado">
@@ -30,6 +32,11 @@ function pesquisar() {
       `;
     }
   }
+
+if (!resultados) {
+  resultados = "<p>Nada foi encontrado</p>"
+}
+
   // Atribui a string de resultados ao conteúdo HTML da seção
   section.innerHTML = resultados;
 }
